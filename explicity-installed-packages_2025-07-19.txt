@@ -1,6 +1,5 @@
 
 7zip
-autotiling-rs
 base
 base-devel
 brightnessctl
