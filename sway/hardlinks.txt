@@ -1,0 +1,47 @@
+# [ Sway ]
+~/.config/sway/config
+~/.dotfiles/sway/config
+
+
+# [ Waybar ]
+~/.config/waybar/config.jsonc
+~/.dotfiles/waybar/config.jsonc
+
+~/.config/waybar/style.css
+~/.dotfiles/waybar/style.css
+
+
+# [ Rofi-wayland ]
+~/.config/rofi/config.rasi
+~/.dotfiles/rofi/config.rasi
+
+~/.local/share/rofi/themes/sqn_custom.rasi
+~/.dotfiles/share/rofi/themes/sqn_custom.rasi
+
+
+# [ foot ]
+~/.config/foot/foot.ini
+~/.dotfiles/foot/foot.ini
+
+
+# [ fastfetch ]
+~/.config/fastfetch/config.jsonc
+~/.dotfiles/fastfetch/config.jsonc
+
+
+# [ nvim ]
+~/.config/nvim/init.lua
+~/.dotfiles/nvim/init.lua
+
+
+# [ XDG ]
+~/.config/user-dirs.dirs
+~/.dotfiles/user-dirs.dirs
+
+
+# [ zsh ] 
+~/.zshrc
+~/.dotfiles/.zshrc
+
+
+

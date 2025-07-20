@@ -1,0 +1,257 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono NF;
+    font-weight: Bold;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #d3d3d3;
+}
+
+
+button {
+    border: none;
+    border-radius: 5;
+    margin: 0 1px;
+}
+
+button:hover {
+    background: inherit;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #914355;
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: rgba(44, 92, 104, 0.7);
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(245, 90, 120, 0.6);
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    background-color: rgba(157, 35, 50, 0.7);
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #000000;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 0px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 10;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 10;
+}
+
+#clock {
+    background-color: #914355;
+    color: #ffffff;
+    padding: 0 5px;
+    margin-right: 10;
+}
+
+#clock:hover {
+    background-color: #f55a78;
+    color: #ffffff;
+}
+
+#battery {
+    background-color: #67c7ad;
+    color: #000000;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#battery:hover {
+    background-color: #914355;
+    color: #ffffff;
+}
+
+#battery.charging, #battery.plugged {
+    color: #000000;
+    background-color: #72d89a;
+    padding: 0 10px;
+    margin: 0 0px;
+}
+
+#battery.charging:hover, #battery.plugged:hover {
+    background-color: #914355;
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 3.0s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#cpu {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#memory {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#backlight {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#network {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#network:hover {
+    background-color: #914355;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#network.disconnected:hover {
+    background-color: #914355;
+    color: #ffffff;
+}
+
+#pulseaudio {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#pulseaudio.muted {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #2a5c45;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#temperature {
+    background-color: rgba(44, 92, 104, 0.0);
+    color: #67c7ad;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+    padding: 0 10px;
+    margin: 0 0px;
+    border-radius: 0px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(44, 92, 104, 0.7);
+    color: rgba(255, 255, 255, 1.0);
+    padding: 0 10px;
+    margin: 0 5px;
+    border-radius: 8px;
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
